@@ -1,5 +1,13 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AuthLoginPage from "./pages/auth/AuthLoginPages";
+import UserPage from "./pages/user/UserPage";
+import UserAddPage from "./pages/user/UserAddPage";
+import ProfilPage from "./pages/profil/ProfilPage";
+import KaryawanPage from "./pages/karyawan/KaryawanPage";
+import JabatanPage from "./pages/jabatan/JabatanPage";
+import GolonganPage from "./pages/golongan/GolonganPage";
+import PendapatanPage from "./pages/pendapatan/PendapatanPage";
+import PotonganPage from "./pages/potongan/PotonganPage";
 // import BarangListPage from "./pages/barang/BarangListPage";
 // import BarangAddPage from "./pages/barang/BarangAddPage";
 // import BarangEditPage from "./pages/barang/BarangEditPage";
@@ -15,6 +23,15 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<AuthLoginPage />} />
+        <Route path="/user" element={<UserPage />} />
+        <Route path="/user/add" element={<UserAddPage />} />
+        <Route path="/profil" element={<ProfilPage />} />
+        <Route path="/karyawan" element={<KaryawanPage />} />
+        <Route path="/jabatan" element={<JabatanPage />} />
+        <Route path="/golongan" element={<GolonganPage />} />
+        <Route path="/pendapatan" element={<PendapatanPage />} />
+        <Route path="/potongan" element={<PotonganPage />} />
+
         {/* <Route path="/barang" element={<BarangListPage />} />
         <Route path="/barang/add" element={<BarangAddPage />} />x 
         <Route path="/barang/edit/:kodeBarang" element={<BarangEditPage />} />

@@ -27,8 +27,10 @@ const AuthLoginPage = () => {
       <Container>
         <Row className="vh-100 d-flex justify-content-center align-items-center">
           <Col md={4}>
-            <Card>
-              <Card.Img variant="top" src="https://picsum.photos/900/400?random=1" />
+              <div className="d-flex justify-content-center">
+                <h2>Admin Login</h2>
+              </div>
+            <Card className="mt-3">
               <Card.Body>
                 <Form.Group className="my-3">
                   <Form.Label>Email Address</Form.Label>
