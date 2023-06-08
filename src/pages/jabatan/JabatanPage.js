@@ -26,7 +26,7 @@ const JabatanPage = () => {
     >
       <Card className="mt-2">
         <Card.Header className="bg-secondary text-light">
-          <h5>Profil</h5>
+          <h5>Jabatan</h5>
         </Card.Header>
         <Table striped bordered hover size="sm">
           <thead>
@@ -34,10 +34,8 @@ const JabatanPage = () => {
               <th>ID</th>
               <th>Nama Jabatan</th>
               <th>Tunjangan Jabatan</th>
-              <th>Tunjangan-01</th>
-              <th>Tunjangan-02</th>
-              <th>Tunjangan-03</th>
-              <th>Action</th>
+              <th>Tunjangan Keluarga</th>
+              <th>Tunjangan Anak</th>
             </tr>
           </thead>
           <tbody>
@@ -45,17 +43,8 @@ const JabatanPage = () => {
               <td>JB-001</td>
               <td>HRD</td>
               <td>200000</td>
-              <td>Tunjangan-01</td>
-              <td>Tunjangan-02</td>
-              <td>Tunjangan-03</td>
-              <td className="d-flex gap-2">
-                <Button variant="success" size="sm">
-                  <FiEdit />
-                </Button>
-                <Button variant="danger" size="sm">
-                  <RiDeleteBin5Fill />{" "}
-                </Button>
-              </td>
+              <td>300000</td>
+              <td>400000</td>
             </tr>
           </tbody>
         </Table>

@@ -6,39 +6,49 @@ import { FiEdit } from "react-icons/fi";
 import { RiDeleteBin5Fill } from "react-icons/ri";
 import { FaSearch } from "react-icons/fa";
 
-const PendapatanPage = () => {
+const LaporanGajiPage = () => {
   const navigate = useNavigate();
   return (
     <NavigationWidget
       buttonCreate={
         <Button onClick={() => navigate("/user/add")}>
-          <VscAdd />  Tambah
+          <VscAdd /> Tambah
         </Button>
       }
       actionTop={
-        <InputGroup >
+        <InputGroup>
           <Form.Control />
           <Button size="sm" variant="outline-secondary">
-            <FaSearch />  Search
+            <FaSearch /> Search
           </Button>
         </InputGroup>
       }
     >
       <Card className="mt-2">
         <Card.Header className="bg-secondary text-light">
-          <h5>Pendapatan</h5>
+          <h5>Laporan Gaji</h5>
         </Card.Header>
         <Table striped bordered hover size="sm">
           <thead>
             <tr>
-              <th>ID</th>
-              <th>Nama Pendapatan</th>
+              <th>ID Gaji</th>
+              <th>Tanggal</th>
+              <th>Nama Karyawan</th>
+              <th>Divisi</th>
+              <th>Total Pendapatan</th>
+              <th>Total Potongan</th>
+              <th>Gaji Bersih</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>PD-001</td>
-              <td>Gaji Pokok</td>
+              <td>GJ-001</td>
+              <td>7 Juni 2023</td>
+              <td>Kiki Saputra</td>
+              <td>HRD</td>
+              <td>5000000</td>
+              <td>700000</td>
+              <td>4300000</td>
             </tr>
           </tbody>
         </Table>
@@ -47,4 +57,4 @@ const PendapatanPage = () => {
   );
 };
 
-export default PendapatanPage;
+export default LaporanGajiPage;

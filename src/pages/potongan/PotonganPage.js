@@ -26,7 +26,7 @@ const PotonganPage = () => {
     >
       <Card className="mt-2">
         <Card.Header className="bg-secondary text-light">
-          <h5>Profil</h5>
+          <h5>Potongan</h5>
         </Card.Header>
         <Table striped bordered hover size="sm">
           <thead>
@@ -39,14 +39,6 @@ const PotonganPage = () => {
             <tr>
               <td>PO-001</td>
               <td>BPJS</td>
-              <td className="d-flex gap-2">
-                <Button variant="success" size="sm">
-                  <FiEdit />
-                </Button>
-                <Button variant="danger" size="sm">
-                  <RiDeleteBin5Fill />{" "}
-                </Button>
-              </td>
             </tr>
           </tbody>
         </Table>

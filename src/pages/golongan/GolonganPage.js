@@ -26,7 +26,7 @@ const GolonganPage = () => {
     >
       <Card className="mt-2">
         <Card.Header className="bg-secondary text-light">
-          <h5>Profil</h5>
+          <h5>Golongan</h5>
         </Card.Header>
         <Table striped bordered hover size="sm">
           <thead>
@@ -34,7 +34,6 @@ const GolonganPage = () => {
               <th>ID</th>
               <th>Nama Golongan</th>
               <th>Tunjangan Golongan</th>
-              <th>Action</th>
             </tr>
           </thead>
           <tbody>
@@ -42,14 +41,6 @@ const GolonganPage = () => {
               <td>GL-001</td>
               <td>Gologan-01</td>
               <td>100000</td>
-              <td className="d-flex gap-2">
-                <Button variant="success" size="sm">
-                  <FiEdit />
-                </Button>
-                <Button variant="danger" size="sm">
-                  <RiDeleteBin5Fill />{" "}
-                </Button>
-              </td>
             </tr>
           </tbody>
         </Table>

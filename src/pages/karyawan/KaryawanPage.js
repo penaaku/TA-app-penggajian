@@ -11,22 +11,22 @@ const KaryawanPage = () => {
   return (
     <NavigationWidget
       buttonCreate={
-        <Button onClick={() => navigate("/user/add")}>
-          <VscAdd />  Tambah
+        <Button onClick={() => navigate("/karyawan/add")}>
+          <VscAdd /> Tambah
         </Button>
       }
       actionTop={
-        <InputGroup >
+        <InputGroup>
           <Form.Control />
           <Button size="sm" variant="outline-secondary">
-            <FaSearch />  Search
+            <FaSearch /> Search
           </Button>
         </InputGroup>
       }
     >
       <Card className="mt-2">
         <Card.Header className="bg-secondary text-light">
-          <h5>Profil</h5>
+          <h5>Karyawan</h5>
         </Card.Header>
         <Table striped bordered hover size="sm">
           <thead>
@@ -37,25 +37,20 @@ const KaryawanPage = () => {
               <th>Golongan</th>
               <th>Jabatan</th>
               <th>Divisi</th>
-              <th>Action</th>
+              <th>Status Pernikahan</th>
+              <th>Jumlah Anak</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>KRY-001</td>
+              <td>KY-001</td>
               <td>Kiki Putra</td>
               <td>5000000</td>
               <td>Golongan-01</td>
               <td>Manager</td>
               <td>Divisi-01</td>
-              <td className="d-flex gap-2">
-                <Button variant="success" size="sm">
-                  <FiEdit />
-                </Button>
-                <Button variant="danger" size="sm">
-                  <RiDeleteBin5Fill />{" "}
-                </Button>
-              </td>
+              <td>Menikah</td>
+              <td>2</td>
             </tr>
           </tbody>
         </Table>

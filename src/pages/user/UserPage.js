@@ -5,9 +5,13 @@ import { VscAdd } from "react-icons/vsc";
 import { FiEdit } from "react-icons/fi";
 import { RiDeleteBin5Fill } from "react-icons/ri";
 import { FaSearch } from "react-icons/fa";
+import { useState } from "react";
 
 const UserPage = () => {
   const navigate = useNavigate();
+  const [daftarUser, setDaftarUser] = useState([])
+
+  
   return (
     <NavigationWidget
       buttonCreate={
@@ -35,7 +39,6 @@ const UserPage = () => {
               <th>Username</th>
               <th>Nama Lengkap</th>
               <th>Status</th>
-              <th>Action</th>
             </tr>
           </thead>
           <tbody>
@@ -44,14 +47,6 @@ const UserPage = () => {
               <td>Bunga</td>
               <td>Bunga Mawar Merah</td>
               <td>Admin</td>
-              <td className="d-flex gap-2">
-                <Button variant="success" size="sm">
-                  <FiEdit />
-                </Button>
-                <Button variant="danger" size="sm">
-                  <RiDeleteBin5Fill />{" "}
-                </Button>
-              </td>
             </tr>
           </tbody>
         </Table>

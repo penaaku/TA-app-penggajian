@@ -1,7 +1,7 @@
 import config from "../config";
 import HTTPService from "./HTTPService";
 
-const ENPOINT_LOGIN = "/users/login";
+const ENPOINT_LOGIN = "/user/login";
 const ENDPOINT_CHECK_TOKEN = "/hello/world";
 const KEY_LOCAL_STORAGE_TOKEN = "TOKEN";
 

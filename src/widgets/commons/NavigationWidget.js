@@ -41,11 +41,12 @@ const NavigationWidget = ({ children, buttonCreate, actionTop, username, avatar 
               <Nav.Link disabled>
                 <FaCartPlus /> TRANSAKSI
               </Nav.Link>
-              <Nav.Link onClick={() => navigate("/penggajian")}>Data Gaji</Nav.Link>
+              <Nav.Link onClick={() => navigate("/penggajian/input")}>Penggajian</Nav.Link>
+              {/* <Nav.Link onClick={() => navigate("/penggajian/list")}>Penggajian</Nav.Link> */}
               <Nav.Link disabled>
                 <HiDocumentReport /> LAPORAN
               </Nav.Link>
-              <Nav.Link onClick={() => navigate("/reporting/pembelian")}>Laporan Gaji</Nav.Link>
+              <Nav.Link onClick={() => navigate("/laporan")}>Laporan Gaji</Nav.Link>
               <Nav.Link onClick={() => navigate("/reporting/pembelian")}>Slip Gaji</Nav.Link>
             </Nav>
           </Col>
