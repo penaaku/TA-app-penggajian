@@ -1,13 +1,33 @@
 import { Button, Card, Form, InputGroup, Table } from "react-bootstrap";
 import NavigationWidget from "../../widgets/commons/NavigationWidget";
 import { useNavigate } from "react-router-dom";
-import { VscAdd } from "react-icons/vsc";
-import { FiEdit } from "react-icons/fi";
-import { RiDeleteBin5Fill } from "react-icons/ri";
-import { FaSearch } from "react-icons/fa";
+import { useEffect, useState } from "react";
+import ProfilService from "../../services/ProfilService";
 
 const ProfilPage = () => {
   const navigate = useNavigate();
+  const [daftarProfil, setDaftarProfil] = useState({});
+  const [paginateProfil, setPaginateProfil] = useState([]);
+  const [queryProfil, setQueryProfil] = useState({ page: 1, limit: 10 });
+
+  useEffect(() => {
+    ProfilService.list(daftarProfil)
+      .then((response) => {
+        setDaftarProfil(response.data);
+        if (response.headers.pagination) {
+          setPaginateProfil(JSON.parse(response.headers.pagination));
+        }
+      })
+      .catch((error) => console.log(error));
+  }, [queryProfil]);
+
+  const callbackPaginator = (page) => {
+    setQueryProfil((values) => ({ ...values, page }));
+  };
+
+  const callbackProfilSearchInlineWidget = (query) => {
+    setQueryProfil((values) => ({ ...values, ...query }));
+  };
   return (
     <NavigationWidget>
       <Card className="mt-2">
@@ -27,15 +47,18 @@ const ProfilPage = () => {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>ID-001</td>
-              <td>PT. Cendana Dua</td>
-              <td>Jl. Setapak No.34 Jakarta</td>
-              <td>111222333</td>
-              <td>-</td>
-              <td>cendana@gmail.com</td>
-              <td>www.cendanadua.com</td>
-            </tr>
+            {daftarProfil.results &&
+              daftarProfil.results.map((profil, index) => (
+                <tr key={index}>
+                  <td>{profil.ID_Profil}</td>
+                  <td>{profil.Nama}</td>
+                  <td>{profil.Alamat}</td>
+                  <td>{profil.Telepon}</td>
+                  <td>{profil.Fax}</td>
+                  <td>{profil.Email}</td>
+                  <td>{profil.Website}</td>
+                </tr>
+              ))}
           </tbody>
         </Table>
       </Card>

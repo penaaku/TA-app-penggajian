@@ -17,8 +17,8 @@ const NavigationWidget = ({ children, buttonCreate, actionTop, username, avatar 
 
           <Navbar.Collapse className="justify-content-end">
             <Navbar.Text>Selamat datang! </Navbar.Text>
-            <Navbar.Text>{username}</Navbar.Text>
-            <Navbar.Text>{avatar}</Navbar.Text>
+            {/* <Navbar.Text>{username}</Navbar.Text>
+            <Navbar.Text>{avatar}</Navbar.Text> */}
           </Navbar.Collapse>
         </Container>
       </Navbar>

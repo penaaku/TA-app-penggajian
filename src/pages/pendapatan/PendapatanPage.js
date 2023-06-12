@@ -11,7 +11,7 @@ const PendapatanPage = () => {
   return (
     <NavigationWidget
       buttonCreate={
-        <Button onClick={() => navigate("/user/add")}>
+        <Button onClick={() => navigate("/pendapatan/add")}>
           <VscAdd />  Tambah
         </Button>
       }
@@ -31,7 +31,7 @@ const PendapatanPage = () => {
         <Table striped bordered hover size="sm">
           <thead>
             <tr>
-              <th>ID</th>
+              <th>ID Pendapatan</th>
               <th>Nama Pendapatan</th>
             </tr>
           </thead>

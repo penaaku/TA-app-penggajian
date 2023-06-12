@@ -12,23 +12,29 @@ import LaporanGajiPage from "./pages/laporan/LaporanGajiPage";
 import KaryawanAddPage from "./pages/karyawan/KaryawanAddPage";
 import PenggajianInputPage from "./pages/penggajian/PenggajianInputPage";
 import PenggajianListPage from "./pages/penggajian/PenggajianListPage";
-import DashboardPage from "./pages/dashboard/DashboardPage";
+import JabatanAddPage from "./pages/jabatan/JabatanAddPage";
+import GolonganAddPage from "./pages/golongan/GolonganAddPage";
+import PendapatanAddPage from "./pages/pendapatan/PendapatanAddPage";
+import PotonganAddPage from "./pages/potongan/PotonganAddPage";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<AuthLoginPage />} />
-        <Route path="/dashboard" element={<DashboardPage />} />
         <Route path="/user" element={<UserPage />} />
         <Route path="/user/add" element={<UserAddPage />} />
         <Route path="/profil" element={<ProfilPage />} />
         <Route path="/karyawan" element={<KaryawanPage />} />
         <Route path="/karyawan/add" element={<KaryawanAddPage />} />
         <Route path="/jabatan" element={<JabatanPage />} />
+        <Route path="/jabatan/add" element={<JabatanAddPage />} />
         <Route path="/golongan" element={<GolonganPage />} />
+        <Route path="/golongan/add" element={<GolonganAddPage />} />
         <Route path="/pendapatan" element={<PendapatanPage />} />
+        <Route path="/pendapatan/add" element={<PendapatanAddPage />} />
         <Route path="/potongan" element={<PotonganPage />} />
+        <Route path="/potongan/add" element={<PotonganAddPage />} />
         <Route path="/laporan" element={<LaporanGajiPage />} />
         <Route path="/penggajian/input" element={<PenggajianInputPage />} />
         <Route path="/penggajian/list" element={<PenggajianListPage />} />
